@@ -14,7 +14,7 @@ import (
 )
 
 func receiveCodeViaLocalServer(ctx context.Context, c *Config) (string, error) {
-	l, err := listener.New([]string{"127.0.0.1:18000", "127.0.0.1:28000"})
+	l, err := listener.New([]string{"localhost:18000", "localhost:28000"})
 	if err != nil {
 		return "", fmt.Errorf("could not start a local server: %w", err)
 	}
